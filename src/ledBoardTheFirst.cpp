@@ -24,7 +24,7 @@ void setup(void) {
   grid.setBrightness(255);
   grid.setTextWrap(false);
 
-  Serial << "| Finished Setup |" << endl;
+  Serial << "| LED Board The First |" << endl;
 }
 
 void loop(void) {
