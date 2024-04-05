@@ -29,10 +29,12 @@ void setup(void) {
 
 void loop(void) {
   grid.fillScreen(grid.Color(48, 213, 200));  // Fill the screen with a nice turquoise
+  grid.show();                                // Make the matrix show the changes
   digitalWrite(LED_BUILTIN, HIGH);            // Turn on the onboard LED
   delay(500);                                 // wait 500ms
 
   grid.fillScreen(grid.Color(0, 0, 0));  // Fill the screen with black
+  grid.show();                           // Make the matrix show the changes
   digitalWrite(LED_BUILTIN, LOW);        // Turn off the onboard LED
   delay(500);                            // wait 500ms
 }
