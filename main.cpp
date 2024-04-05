@@ -1,4 +1,4 @@
- #include <Adafruit_GFX.h>
+#include <Adafruit_GFX.h>
  #include <Adafruit_NeoMatrix.h>
  #include <Streaming.h>
 
@@ -7,15 +7,14 @@
  #define width 8
  #define height 5
 
-// Colour palette 
- #define Blue grid.Color(0, 105, 92)
- #define BlueG grid.Color(50, 115, 53)
-
-
  Adafruit_NeoMatrix grid(width, height, gridPin,
                          NEO_MATRIX_TOP + NEO_MATRIX_LEFT +
                              NEO_MATRIX_ROWS + NEO_MATRIX_PROGRESSIVE,
                          NEO_GRB + NEO_KHZ800);
+
+// Colour palette 
+ #define Blue grid.Color(0, 105, 92)
+ #define BlueG grid.Color(50, 115, 53)
 
  void setup(void) {
    Serial.begin(115200);
@@ -31,11 +30,26 @@
    Serial << "| LED Board The First |" << endl;
  }
 
- void loop(void) {
-   grid.fillScreen(grid.Color(48, 213, 200));
-   grid.show();
-   digitalWrite(LED_BUILTIN, HIGH);
-   delay(800);
+void loop(void) {
+   grid.fillScreen(grid.Color(48, 213, 200));  
+   grid.show(); 
+   digitalWrite(LED_BUILTIN, HIGH);            
+   delay(800);                                 
+
+   grid.fillScreen(grid.Color(0, 105, 92));  
+   grid.show(); 
+   digitalWrite(LED_BUILTIN, HIGH);            
+   delay(800); 
+
+   grid.fillScreen(grid.Color(50, 115, 53));  
+   grid.show(); 
+   digitalWrite(LED_BUILTIN, HIGH);            
+   delay(800); 
+
+   grid.fillScreen(grid.Color(0, 0, 0));  
+   grid.show(); 
+   digitalWrite(LED_BUILTIN, LOW);        
+   delay(20);   
    
    // Iteration 1 - 11 turn Blue
    grid.drawPixel(4,0, Blue);
@@ -194,6 +208,6 @@
    grid.fillScreen(grid.Color(0,0,0));    
    grid.show();
    digitalWrite(LED_BUILTIN, LOW);
-   delay(800);
+   delay(800); 
 
  }
