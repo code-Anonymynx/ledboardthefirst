@@ -9,13 +9,13 @@ I used an ESP8266-D1 and a 5*8 LED Matrix (Adafruit Neopixel Shield).
 
 **Notes**
 
-It is a fairly janky hand-built pattern, mostly as a proof of concept. 
+It is a fairly janky hand-built pattern, mostly as a proof of concept, and I had some help with the set-up.
 
 
 This was my first time with:
   - Platform IO
   - C++ Language
-  - Using a library
+  - Using a library 
 
 
 I used an excel sheet to help visualise the iterations.
