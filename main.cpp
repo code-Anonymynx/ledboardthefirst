@@ -19,8 +19,6 @@
  void setup(void) {
    Serial.begin(115200);
 
-   pinMode(LED_BUILTIN, OUTPUT);
-
    grid.begin();
    grid.setRotation(3);  // 3 for snake & text 0 for everything else
    grid.show();
@@ -32,23 +30,19 @@
 
 void loop(void) {
    grid.fillScreen(grid.Color(48, 213, 200));  
-   grid.show(); 
-   digitalWrite(LED_BUILTIN, HIGH);            
+   grid.show();           
    delay(800);                                 
 
    grid.fillScreen(grid.Color(0, 105, 92));  
-   grid.show(); 
-   digitalWrite(LED_BUILTIN, HIGH);            
+   grid.show();        
    delay(800); 
 
    grid.fillScreen(grid.Color(50, 115, 53));  
-   grid.show(); 
-   digitalWrite(LED_BUILTIN, HIGH);            
+   grid.show();         
    delay(800); 
 
    grid.fillScreen(grid.Color(0, 0, 0));  
-   grid.show(); 
-   digitalWrite(LED_BUILTIN, LOW);        
+   grid.show();       
    delay(20);   
    
    // Iteration 1 - 11 turn Blue
@@ -64,7 +58,6 @@ void loop(void) {
    grid.drawPixel(0,2, Blue);
    grid.drawPixel(0,4, Blue);
    grid.show();
-   digitalWrite(LED_BUILTIN, HIGH);
    delay(800);
 
   // Iteration 2 - 14 turn Blue
@@ -83,7 +76,6 @@ void loop(void) {
    grid.drawPixel(0,5, Blue);
    grid.drawPixel(0,6, Blue);
    grid.show();
-   digitalWrite(LED_BUILTIN, HIGH);
    delay(800);
 
   // Iteration 3 - 11 turn blueG, 7 turn blue
@@ -106,7 +98,6 @@ void loop(void) {
    grid.drawPixel(1,5, Blue);
    grid.drawPixel(0,1, Blue);
    grid.show();
-   digitalWrite(LED_BUILTIN, HIGH);
    delay(800);
 
    //  Iteration 4 - 14 turn blueG, 8 turn blue
@@ -133,7 +124,6 @@ void loop(void) {
    grid.drawPixel(0,0, Blue);
    grid.drawPixel(0,7, Blue);
    grid.show();
-   digitalWrite(LED_BUILTIN, HIGH);
    delay(800);
    
    // Iteration 5 - 11 turn off, 7 turn blueG
@@ -148,9 +138,6 @@ void loop(void) {
    grid.drawPixel(1,6,0);
    grid.drawPixel(0,2,0);
    grid.drawPixel(0,4,0);
-   grid.show();
-   digitalWrite(LED_BUILTIN, LOW);
-
    grid.drawPixel(4,4, BlueG);
    grid.drawPixel(3,2, BlueG);
    grid.drawPixel(3,7, BlueG);
@@ -159,7 +146,6 @@ void loop(void) {
    grid.drawPixel(1,5, BlueG);
    grid.drawPixel(0,1, BlueG);
    grid.show();
-   digitalWrite(LED_BUILTIN, HIGH);
    delay(800);
 
    // Iteration 6 - 14 turn off, 8 turn blueG
@@ -177,9 +163,6 @@ void loop(void) {
    grid.drawPixel(0,3,0);
    grid.drawPixel(0,5,0);
    grid.drawPixel(0,6,0);
-   grid.show();
-   digitalWrite(LED_BUILTIN, LOW);
-
    grid.drawPixel(4,5, BlueG);
    grid.drawPixel(3,1, BlueG);
    grid.drawPixel(3,4, BlueG);
@@ -201,13 +184,11 @@ void loop(void) {
    grid.drawPixel(1,5,0);
    grid.drawPixel(0,1,0);
    grid.show();
-   digitalWrite(LED_BUILTIN, LOW);
    delay(800);
 
    // Iteration 8 - all off
    grid.fillScreen(grid.Color(0,0,0));    
    grid.show();
-   digitalWrite(LED_BUILTIN, LOW);
    delay(800); 
 
  }
